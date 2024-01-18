@@ -1,0 +1,28 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "courseTitle": "javascript",
+      "startDate": "2024-01-26",
+      "daysToComplete": 30,
+      "courseLayout": "online/classroom",
+      "imageUrl": "javascript.jpg",
+      "description": "Beginners course for javascript",
+      "booking": []
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Berndt",
+      "lastName": "Jansson",
+      "billingAddress": "Hogbergsgatan 12",
+      "postalCode": "123 45",
+      "city": "Stockholm",
+      "emailAddress": "berndt.jansson@email.com",
+      "phoneNumber": "+1234567890",
+      "password": "password",
+      "booking": []
+    }
+  ]
+}
