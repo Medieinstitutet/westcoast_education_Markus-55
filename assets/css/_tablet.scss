@@ -1,0 +1,115 @@
+/* Style for hiding and showing css,
+when switching from tablet to desktop screen */
+.desktopHidden {
+  display: block;
+}
+
+.mobileHidden {
+  display: none;
+}
+
+/* Style for the navigation */
+.navWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  input {
+    position: fixed;
+    z-index: 1;
+    width: pxToRem(35px);
+    min-height: pxToRem(35px);
+    opacity: 0;
+  }
+}
+
+/* Styling for hamburger icon */
+.navBar {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(49, 160, 160);
+  color: white;
+  button {
+    position: fixed;
+    margin-top: pxToRem(8px);
+    margin-left: pxToRem(8px);
+    width: pxToRem(35px);
+    min-height: pxToRem(35px);
+    background: transparent;
+    border: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  span {
+    display: block;
+    width: pxToRem(35px);
+    min-height: pxToRem(7px);
+    background-color: white;
+    border-radius: pxToRem(6px);
+    margin-bottom: pxToRem(4px);
+  }
+}
+
+/*  Styling for hamburger icon lines when hamburger is clicked */
+input:checked + .navBar button span {
+  position: absolute;
+  transition: all 0.1s ease-in-out;
+}
+
+input:checked + .navBar button span:nth-child(2) {
+  opacity: 0;
+}
+
+input:checked + .navBar button span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+input:checked + .navBar button span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.logo {
+  font-family: "Jolly Lodger", sans-serif;
+  font-size: pxToRem(25px);
+  font-weight: bold;
+  margin: auto;
+}
+
+/*  Hide nav menu */
+.navBar + nav {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*  Show nav menu when hamburger is clicked */
+input:checked + .navBar + nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  font-family: "Jolly Lodger", sans-serif;
+  font-size: pxToRem(60px);
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 100%;
+  margin-top: pxToRem(100px);
+  line-height: 2;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.navUl {
+  margin: 0;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+}

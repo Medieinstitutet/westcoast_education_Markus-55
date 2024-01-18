@@ -1,0 +1,11 @@
+@import "_base.scss";
+
+// Screen size for mobile and tablets
+@media screen and (min-width: 642px), (max-width: 1023px) {
+  @import "_tablet.scss";
+}
+
+// Screen size for desktops
+@media screen and (min-width: 1024px) {
+  @import "_desktop.scss";
+}

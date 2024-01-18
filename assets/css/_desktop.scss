@@ -1,0 +1,96 @@
+/* Style for hiding and showing css,
+when switching from tablet to desktop screen */
+.desktopHidden {
+  display: none;
+}
+
+.mobileHidden {
+  display: block;
+}
+
+/* Style for the navigation */
+.navWrapper {
+  display: flex;
+  position: sticky;
+  background-color: rgb(49, 160, 160);
+  top: 0;
+  z-index: 2;
+  input {
+    display: none;
+  }
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  button {
+    display: none;
+  }
+}
+
+.navBar + nav {
+  display: flex;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+}
+
+.logo {
+  font-family: "Jolly Lodger", sans-serif;
+  font-size: pxToRem(35px);
+  color: white;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+nav ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-family: "Rubik", sans-serif;
+  font-size: pxToRem(27px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-height: 100%;
+  line-height: 2;
+  align-items: center;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+.navLeft {
+  margin-left: auto;
+  li:hover {
+    transition-duration: 0.2s;
+    padding-right: pxToRem(10px);
+  }
+}
+
+.navUl {
+  margin-right: auto;
+  li:hover {
+    transition-duration: 0.2s;
+    padding-right: pxToRem(10px);
+  }
+}
+
+nav li + li:before {
+  content: "|";
+  padding: pxToRem(7px);
+  color: white;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
