@@ -45,26 +45,19 @@
       "booking": []
     }
   ],
+  "loggedInUser": [
+    null
+  ],
   "customers": [
     {
+      "id": "1",
       "name": "Berndt",
       "lastName": "Jansson",
       "billingAddress": "Hogbergsgatan 12",
       "emailAddress": "berndt.jansson@email.com",
       "phoneNumber": "+1234567890",
       "password": "password",
-      "booking": [],
-      "id": "1"
-    },
-    {
-      "customerName": "Markus",
-      "customerLastName": "Bielaszka",
-      "billingAddress": "vägen 45",
-      "emailAddress": "markus.bielaszka@gmail.com",
-      "phoneNumber": "1234567890",
-      "password": "12345",
-      "booking": [],
-      "id": "t_ToAjV"
+      "booking": []
     }
   ]
 }

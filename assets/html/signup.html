@@ -22,11 +22,34 @@
         <div class="logo mobileHidden">Blockchain Education</div>
         <ul class="navUl">
           <li><a href="/assets/html/signin.html" target="_blank">sign in</a></li>
-          <li><a href="/assets/html/signup.html" target="_blank">sign up</a></li>
           <li><a href="/assets/html/courses.html" target="_blank">courses</a></li>
         </ul>
       </nav>
     </div>
   </main>
+
+  <form id="signupForm">
+    <label for="customerName">name:</label>
+    <input type="text" id="customerName" required>
+
+    <label for="customerLastName">last name:</label>
+    <input type="text" id="customerLastName" required>
+  
+    <label for="billingAddress">billing address:</label>
+    <input type="text" id="billingAddress" required>
+  
+    <label for="emailAddress">email address:</label>
+    <input type="email" id="emailAddress" required>
+  
+    <label for="phoneNumber">phone number:</label>
+    <input type="tel" id="phoneNumber" required>
+
+    <label for="password">password:</label>
+    <input type="password" id="password" required>
+  
+    <button type="submit">sign up</button>
+  </form>
+  
+  <script type="module" src="/assets/js/signup.js"></script>
 </body>
 </html>

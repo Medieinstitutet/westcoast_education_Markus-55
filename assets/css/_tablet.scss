@@ -68,7 +68,6 @@ input:checked + .navBar button span:nth-child(3) {
 }
 
 .logo {
-  font-family: "Jolly Lodger", sans-serif;
   font-size: pxToRem(25px);
   font-weight: bold;
   margin: auto;
@@ -93,7 +92,6 @@ input:checked + .navBar + nav {
 nav ul {
   display: flex;
   flex-direction: column;
-  font-family: "Jolly Lodger", sans-serif;
   font-size: pxToRem(60px);
   margin-bottom: 0;
   padding: 0;

@@ -41,7 +41,6 @@ when switching from tablet to desktop screen */
 }
 
 .logo {
-  font-family: "Jolly Lodger", sans-serif;
   font-size: pxToRem(35px);
   color: white;
   font-weight: bold;
@@ -52,7 +51,6 @@ nav ul {
   position: relative;
   display: flex;
   flex-direction: row;
-  font-family: "Rubik", sans-serif;
   font-size: pxToRem(27px);
   margin: 0;
   padding: 0;
