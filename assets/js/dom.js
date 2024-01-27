@@ -1,18 +1,32 @@
+let div;
+let bookOnline;
+let bookClassroom;
+let bookOnlineAndClassroom;
 const createCard = (course) => {
-  const div = document.createElement('div');
+  // const div = document.createElement('div');
+  div = document.createElement('div');
   div.classList.add('course-image');
   
-  const button = document.createElement('button');
-  button.classList.add('book-course');
+  bookOnline = document.createElement('button');
+  bookClassroom = document.createElement('button');
+  bookOnlineAndClassroom = document.createElement('button');
 
-  button.innerText = 'Book Availability';
+  bookOnline.classList.add('bookOnline');
+  bookClassroom.classList.add('bookClassroom');
+  bookOnlineAndClassroom.classList.add('bookOnlineAndClassroom');
+  // const button = document.createElement('button');
+  // button.classList.add('bookCourse');
+
+  // button.innerText = 'Book Availability';
   div.appendChild(createImage(course.imageUrl, course.id));
   div.appendChild(createCourseTitle(course));
   div.appendChild(createCourseStartDate(course));
   div.appendChild(daysToCompleteCourse(course));
   div.appendChild(createCourseLayout(course));
   div.appendChild(createCourseDescription(course));
-  div.appendChild(button);
+  div.appendChild(bookOnline);
+  div.appendChild(bookClassroom);
+  div.appendChild(bookOnlineAndClassroom);
 
   return div;
 };
@@ -49,10 +63,20 @@ const daysToCompleteCourse = (course) => {
 const createCourseLayout = (course) => {
   const paragraph = document.createElement('p');
   if(course.classroomAvailability === true && course.onlineAvailability === true) {
+    bookOnline.innerText = 'Book online';
+    bookClassroom.innerText = 'Book in classroom';
+    bookOnlineAndClassroom.innerText = 'Book online and in classroom';
+    
     paragraph.appendChild(document.createTextNode(`Course layout: online and in classroom`));
-  } else if(course.classroomAvailability === true) {
+  } 
+  else if(course.classroomAvailability === true) {
+    
+    bookClassroom.innerText = 'Book in classroom';
+    bookClassroom.classList.add('bookClassroom');
     paragraph.appendChild(document.createTextNode(`Course layout: in classroom`));
   } else {
+    bookOnline.innerText = 'Book online';
+    bookOnline.classList.add('bookOnline');
     paragraph.appendChild(document.createTextNode(`Course layout: online`));
   }
 

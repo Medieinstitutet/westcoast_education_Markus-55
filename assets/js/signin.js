@@ -16,19 +16,20 @@ document.querySelector('#signinForm').addEventListener('submit', async (event) =
   localStorage.setItem('password', password);
   if((userExists && signedUpPassword)) {
     if(!userEmail && !userPassword) {
-      console.log('Logging in user');
+      alert('logged in user');
       localStorage.setItem('emailAddress', emailAddress);
       localStorage.setItem('password', password);
     } else {
-      console.log('User is already logged in');
+      alert('User is already logged in');
     }
   } else {
-    console.log('User does not exist');
+    alert('User does not exist');
   }
 
-  document.querySelector('#signoutBtn').addEventListener('click', () => {
-    localStorage.removeItem('emailAddress');
-    localStorage.removeItem('password');
-    console.log('Loggin out the user...');
-  })
+});
+
+document.querySelector('#signoutBtn').addEventListener('click', () => {
+  localStorage.removeItem('emailAddress');
+  localStorage.removeItem('password');
+  alert('User logged out');
 });

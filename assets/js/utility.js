@@ -1,1 +1,1 @@
-export const isLoggedIn = localStorage.getItem('isLoggedIn');
+export let isLoggedIn = localStorage.getItem('isLoggedIn');

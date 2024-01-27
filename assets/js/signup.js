@@ -34,12 +34,20 @@ signupForm.addEventListener('submit', async (event) => {
 
     const result = await signupResponse.json();
     if (result) {
-      console.log('Success with:', data.emailAddress, data.password);
+      alert('logged in with with:', data.emailAddress);
+      localStorage.setItem('emailAddress', emailAddress);
+      localStorage.setItem('password', password);
     } else {
-      console.log('Failed');
+      alert('Failed to login');
     }
     console.log(result);
   } else {
-    console.log('User already signed up');
+    alert('User already signed up');
   }
+});
+
+document.querySelector('#signoutBtn').addEventListener('click', () => {
+  localStorage.removeItem('emailAddress');
+  localStorage.removeItem('password');
+  alert('User logged out');
 });
