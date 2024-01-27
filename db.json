@@ -8,8 +8,7 @@
       "classroomAvailability": true,
       "onlineAvailability": true,
       "imageUrl": "javascript.jpg",
-      "description": "Beginners course for javascript",
-      "booking": []
+      "description": "Beginners course for javascript"
     },
     {
       "id": "2",
@@ -19,8 +18,7 @@
       "classroomAvailability": false,
       "onlineAvailability": true,
       "imageUrl": "html.jpg",
-      "description": "Beginners course for html",
-      "booking": []
+      "description": "Beginners course for html"
     },
     {
       "id": "3",
@@ -30,8 +28,7 @@
       "classroomAvailability": true,
       "onlineAvailability": false,
       "imageUrl": "css.jpg",
-      "description": "Beginners course for css",
-      "booking": []
+      "description": "Beginners course for css"
     },
     {
       "id": "4",
@@ -41,8 +38,17 @@
       "classroomAvailability": false,
       "onlineAvailability": true,
       "imageUrl": "solidity.jpg",
-      "description": "Beginners course for solidity",
-      "booking": []
+      "description": "Beginners course for solidity"
+    },
+    {
+      "id": "5",
+      "courseTitle": "react",
+      "startDate": "2024-02-19",
+      "daysToComplete": 28,
+      "classroomAvailability": true,
+      "onlineAvailability": true,
+      "imageUrl": "react.jpg",
+      "description": "Beginners course for react"
     }
   ],
   "customers": [
@@ -53,7 +59,22 @@
       "emailAddress": "berndt.jansson@email.com",
       "phoneNumber": "+1234567890",
       "password": "password",
-      "booking": [],
+      "booking": [
+        {
+          "courseId": "1",
+          "courseTitle": "javascript",
+          "startDate": "2024-01-29",
+          "daysToComplete": 30,
+          "bookingAvailability": "online and in classroom"
+        },
+        {
+          "courseId": "2",
+          "courseTitle": "html",
+          "startDate": "2024-01-23",
+          "daysToComplete": 14,
+          "bookingAvailability": "online"
+        }
+      ],
       "id": "1"
     },
     {
@@ -63,7 +84,29 @@
       "emailAddress": "markus.bielaszka@gmail.com",
       "phoneNumber": "1234567890",
       "password": "12345",
-      "booking": [],
+      "booking": [
+        {
+          "courseId": "1",
+          "courseTitle": "javascript",
+          "startDate": "2024-01-29",
+          "daysToComplete": 30,
+          "bookingAvailability": "online and in classroom"
+        },
+        {
+          "courseId": "5",
+          "courseTitle": "react",
+          "startDate": "2024-02-19",
+          "daysToComplete": 28,
+          "bookingAvailability": "online and in classroom"
+        },
+        {
+          "courseId": "4",
+          "courseTitle": "solidity",
+          "startDate": "2024-02-05",
+          "daysToComplete": 45,
+          "bookingAvailability": "online"
+        }
+      ],
       "id": "t_ToAjV"
     }
   ]

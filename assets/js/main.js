@@ -32,6 +32,8 @@ const bookCourse = async (course, bookingAvailability, email) => {
   const bookingInfo = {
     courseId: course.id,
     courseTitle: course.courseTitle,
+    startDate: course.startDate,
+    daysToComplete: course.daysToComplete,
     bookingAvailability: bookingAvailability
   }
   const userResponse = await fetch(`http://localhost:3000/customers?emailAddress=${email}`);

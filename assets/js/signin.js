@@ -1,32 +1,35 @@
-document.querySelector('#signinForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
+document.querySelector('#signinForm').addEventListener('submit', async event => {
+    event.preventDefault();
 
-  // Fetch the list of signed-up users from the server
-  const response = await fetch('http://localhost:3000/customers');
-  const users = await response.json();
+    const emailAddress = document.querySelector('#emailAddress').value;
+    const password = document.querySelector('#password').value;
 
-  const emailAddress = document.querySelector('#emailAddress').value;
-  const password = document.querySelector('#password').value;
+    // Fetch the list of signed-up users from the server
+    const response = await fetch(`http://localhost:3000/customers?emailAddress=${emailAddress}`);
+    const userData = await response.json();
 
-  const userExists = users.some((user) => user.emailAddress === emailAddress);
-  const signedUpPassword = users.some((user) => user.password === password);
+    if(userData.length > 0) {
+      const user = userData[0];
 
-  const userEmail = localStorage.getItem('emailAddress');
-  const userPassword = localStorage.getItem('password');
-  localStorage.setItem('password', password);
-  if((userExists && signedUpPassword)) {
-    if(!userEmail && !userPassword) {
-      alert('logged in user');
-      localStorage.setItem('emailAddress', emailAddress);
-      localStorage.setItem('password', password);
+      // Check if the entered password matches the stored password for the user
+      if(user.password === password) {
+        const userEmail = localStorage.getItem('emailAddress');
+        const userPassword = localStorage.getItem('password');
+
+        if(!userEmail && !userPassword) {
+          alert('Logged in successfully');
+          localStorage.setItem('emailAddress', emailAddress);
+          localStorage.setItem('password', password);
+        } else {
+          alert('User is already logged in');
+        }
+      } else {
+        alert('Incorrect password');
+      }
     } else {
-      alert('User is already logged in');
+      alert('User does not exist');
     }
-  } else {
-    alert('User does not exist');
-  }
-
-});
+  });
 
 document.querySelector('#signoutBtn').addEventListener('click', () => {
   localStorage.removeItem('emailAddress');
