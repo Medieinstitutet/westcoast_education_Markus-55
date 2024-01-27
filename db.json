@@ -7,6 +7,8 @@
       "daysToComplete": 30,
       "classroomAvailability": true,
       "onlineAvailability": true,
+      "current": true,
+      "popular": true,
       "imageUrl": "javascript.jpg",
       "description": "Beginners course for javascript"
     },
@@ -18,6 +20,8 @@
       "classroomAvailability": false,
       "onlineAvailability": true,
       "imageUrl": "html.jpg",
+      "current": true,
+      "popular": false,
       "description": "Beginners course for html"
     },
     {
@@ -27,6 +31,8 @@
       "daysToComplete": 14,
       "classroomAvailability": true,
       "onlineAvailability": false,
+      "current": true,
+      "popular": false,
       "imageUrl": "css.jpg",
       "description": "Beginners course for css"
     },
@@ -37,6 +43,8 @@
       "daysToComplete": 45,
       "classroomAvailability": false,
       "onlineAvailability": true,
+      "current": true,
+      "popular": true,
       "imageUrl": "solidity.jpg",
       "description": "Beginners course for solidity"
     },
@@ -47,34 +55,33 @@
       "daysToComplete": 28,
       "classroomAvailability": true,
       "onlineAvailability": true,
+      "current": false,
+      "popular": true,
+      "imageUrl": "react.jpg",
+      "description": "Beginners course for react"
+    },
+    {
+      "id": "6",
+      "courseTitle": "python",
+      "startDate": "2024-02-15",
+      "daysToComplete": 45,
+      "classroomAvailability": true,
+      "onlineAvailability": false,
+      "current": false,
+      "popular": false,
       "imageUrl": "react.jpg",
       "description": "Beginners course for react"
     }
   ],
   "customers": [
     {
-      "name": "Berndt",
-      "lastName": "Jansson",
+      "customerName": "Berndt",
+      "customerLastName": "Jansson",
       "billingAddress": "Hogbergsgatan 12",
       "emailAddress": "berndt.jansson@email.com",
       "phoneNumber": "+1234567890",
       "password": "password",
-      "booking": [
-        {
-          "courseId": "1",
-          "courseTitle": "javascript",
-          "startDate": "2024-01-29",
-          "daysToComplete": 30,
-          "bookingAvailability": "online and in classroom"
-        },
-        {
-          "courseId": "2",
-          "courseTitle": "html",
-          "startDate": "2024-01-23",
-          "daysToComplete": 14,
-          "bookingAvailability": "online"
-        }
-      ],
+      "booking": [],
       "id": "1"
     },
     {
@@ -90,21 +97,36 @@
           "courseTitle": "javascript",
           "startDate": "2024-01-29",
           "daysToComplete": 30,
-          "bookingAvailability": "online and in classroom"
+          "bookingAvailability": "online",
+          "customerName": "Markus",
+          "customerLastName": "Bielaszka",
+          "billingAddress": "vägen 45",
+          "emailAddress": "markus.bielaszka@gmail.com",
+          "phoneNumber": "1234567890"
         },
         {
-          "courseId": "5",
-          "courseTitle": "react",
-          "startDate": "2024-02-19",
-          "daysToComplete": 28,
-          "bookingAvailability": "online and in classroom"
+          "courseId": "1",
+          "courseTitle": "javascript",
+          "startDate": "2024-01-29",
+          "daysToComplete": 30,
+          "bookingAvailability": "in classroom",
+          "customerName": "Markus",
+          "customerLastName": "Bielaszka",
+          "billingAddress": "vägen 45",
+          "emailAddress": "markus.bielaszka@gmail.com",
+          "phoneNumber": "1234567890"
         },
         {
           "courseId": "4",
           "courseTitle": "solidity",
           "startDate": "2024-02-05",
           "daysToComplete": 45,
-          "bookingAvailability": "online"
+          "bookingAvailability": "online",
+          "customerName": "Markus",
+          "customerLastName": "Bielaszka",
+          "billingAddress": "vägen 45",
+          "emailAddress": "markus.bielaszka@gmail.com",
+          "phoneNumber": "1234567890"
         }
       ],
       "id": "t_ToAjV"

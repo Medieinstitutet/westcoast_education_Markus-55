@@ -1,3 +1,5 @@
+import { signoutBtnHandler } from "./utility.js";
+
 const signupForm = document.querySelector('#signupForm');
 
 signupForm.addEventListener('submit', async (event) => {
@@ -46,8 +48,4 @@ signupForm.addEventListener('submit', async (event) => {
   }
 });
 
-document.querySelector('#signoutBtn').addEventListener('click', () => {
-  localStorage.removeItem('emailAddress');
-  localStorage.removeItem('password');
-  alert('User logged out');
-});
+signoutBtnHandler();

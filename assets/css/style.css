@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Rubik", sans-serif;
   overflow-x: hidden;
@@ -75,10 +71,13 @@ body {
     transform: rotate(-45deg);
   }
   .logo {
-    font-family: "Jolly Lodger", sans-serif;
     font-size: 1.5625rem;
     font-weight: bold;
     margin: auto;
+  }
+  .logo a {
+    text-decoration: none;
+    color: white;
   }
   /*  Hide nav menu */
   .navBar + nav {
@@ -97,7 +96,6 @@ body {
   nav ul {
     display: flex;
     flex-direction: column;
-    font-family: "Jolly Lodger", sans-serif;
     font-size: 3.75rem;
     margin-bottom: 0;
     padding: 0;
@@ -155,17 +153,19 @@ body {
     background-color: transparent;
   }
   .logo {
-    font-family: "Jolly Lodger", sans-serif;
     font-size: 2.1875rem;
     color: white;
     font-weight: bold;
     margin-right: auto;
   }
+  .logo a {
+    text-decoration: none;
+    color: white;
+  }
   nav ul {
     position: relative;
     display: flex;
     flex-direction: row;
-    font-family: "Rubik", sans-serif;
     font-size: 1.6875rem;
     margin: 0;
     padding: 0;

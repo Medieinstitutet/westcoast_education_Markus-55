@@ -2,8 +2,8 @@ let div;
 let bookOnline;
 let bookClassroom;
 let bookOnlineAndClassroom;
+
 const createCard = (course) => {
-  // const div = document.createElement('div');
   div = document.createElement('div');
   div.classList.add('course-image');
   
@@ -14,10 +14,7 @@ const createCard = (course) => {
   bookOnline.classList.add('bookOnline');
   bookClassroom.classList.add('bookClassroom');
   bookOnlineAndClassroom.classList.add('bookOnlineAndClassroom');
-  // const button = document.createElement('button');
-  // button.classList.add('bookCourse');
 
-  // button.innerText = 'Book Availability';
   div.appendChild(createImage(course.imageUrl, course.id));
   div.appendChild(createCourseTitle(course));
   div.appendChild(createCourseStartDate(course));
@@ -72,11 +69,9 @@ const createCourseLayout = (course) => {
   else if(course.classroomAvailability === true) {
     
     bookClassroom.innerText = 'Book in classroom';
-    bookClassroom.classList.add('bookClassroom');
     paragraph.appendChild(document.createTextNode(`Course layout: in classroom`));
   } else {
     bookOnline.innerText = 'Book online';
-    bookOnline.classList.add('bookOnline');
     paragraph.appendChild(document.createTextNode(`Course layout: online`));
   }
 

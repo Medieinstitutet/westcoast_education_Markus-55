@@ -71,6 +71,10 @@ input:checked + .navBar button span:nth-child(3) {
   font-size: pxToRem(25px);
   font-weight: bold;
   margin: auto;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 /*  Hide nav menu */
