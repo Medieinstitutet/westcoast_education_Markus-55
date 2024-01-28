@@ -3,6 +3,7 @@
     {
       "id": "1",
       "courseTitle": "javascript",
+      "coursePrice": "225 kr",
       "startDate": "2024-01-29",
       "daysToComplete": 30,
       "classroomAvailability": true,
@@ -15,6 +16,7 @@
     {
       "id": "2",
       "courseTitle": "html",
+      "coursePrice": "125 kr",
       "startDate": "2024-01-23",
       "daysToComplete": 14,
       "classroomAvailability": false,
@@ -27,6 +29,7 @@
     {
       "id": "3",
       "courseTitle": "css",
+      "coursePrice": "125 kr",
       "startDate": "2024-01-15",
       "daysToComplete": 14,
       "classroomAvailability": true,
@@ -39,6 +42,7 @@
     {
       "id": "4",
       "courseTitle": "solidity",
+      "coursePrice": "250 kr",
       "startDate": "2024-02-05",
       "daysToComplete": 45,
       "classroomAvailability": false,
@@ -51,6 +55,7 @@
     {
       "id": "5",
       "courseTitle": "react",
+      "coursePrice": "225 kr",
       "startDate": "2024-02-19",
       "daysToComplete": 28,
       "classroomAvailability": true,
@@ -63,31 +68,84 @@
     {
       "id": "6",
       "courseTitle": "python",
+      "coursePrice": "200 kr",
       "startDate": "2024-02-15",
       "daysToComplete": 45,
       "classroomAvailability": true,
       "onlineAvailability": false,
       "current": false,
       "popular": false,
-      "imageUrl": "react.jpg",
-      "description": "Beginners course for react"
+      "imageUrl": "python.jpg",
+      "description": "Beginners course for python"
+    },
+    {
+      "id": "7",
+      "courseTitle": "Java",
+      "coursePrice": "250 kr",
+      "startDate": "2024-02-15",
+      "daysToComplete": "65",
+      "classroomAvailability": false,
+      "onlineAvailability": true,
+      "current": false,
+      "popularCourse": true,
+      "description": "Java for beginners"
+    },
+    {
+      "id": "8",
+      "courseTitle": "Java advanced ",
+      "coursePrice": "299 kr",
+      "startDate": "2024-02-29",
+      "daysToComplete": "99",
+      "classroomAvailability": true,
+      "onlineAvailability": false,
+      "current": true,
+      "popularCourse": true,
+      "description": "Java for experts"
     }
   ],
   "customers": [
     {
+      "id": "1",
       "customerName": "Berndt",
       "customerLastName": "Jansson",
       "billingAddress": "Hogbergsgatan 12",
       "emailAddress": "berndt.jansson@email.com",
       "phoneNumber": "+1234567890",
       "password": "password",
-      "booking": [],
-      "id": "1"
+      "booking": [
+        {
+          "courseId": "1",
+          "courseTitle": "javascript",
+          "coursePrice": "225 kr",
+          "startDate": "2024-01-29",
+          "daysToComplete": 30,
+          "bookingAvailability": "online and in classroom",
+          "customerName": "Berndt",
+          "customerLastName": "Jansson",
+          "billingAddress": "Hogbergsgatan 12",
+          "emailAddress": "berndt.jansson@email.com",
+          "phoneNumber": "+1234567890"
+        },
+        {
+          "courseId": "6",
+          "courseTitle": "python",
+          "coursePrice": "200 kr",
+          "startDate": "2024-02-15",
+          "daysToComplete": 45,
+          "bookingAvailability": "in classroom",
+          "customerName": "Berndt",
+          "customerLastName": "Jansson",
+          "billingAddress": "Hogbergsgatan 12",
+          "emailAddress": "berndt.jansson@email.com",
+          "phoneNumber": "+1234567890"
+        }
+      ]
     },
     {
+      "id": "2",
       "customerName": "Markus",
       "customerLastName": "Bielaszka",
-      "billingAddress": "vägen 45",
+      "billingAddress": "Vägen 45",
       "emailAddress": "markus.bielaszka@gmail.com",
       "phoneNumber": "1234567890",
       "password": "12345",
@@ -95,41 +153,43 @@
         {
           "courseId": "1",
           "courseTitle": "javascript",
+          "coursePrice": "225 kr",
           "startDate": "2024-01-29",
           "daysToComplete": 30,
-          "bookingAvailability": "online",
+          "bookingAvailability": "online and in classroom",
           "customerName": "Markus",
           "customerLastName": "Bielaszka",
-          "billingAddress": "vägen 45",
+          "billingAddress": "Vägen 45",
           "emailAddress": "markus.bielaszka@gmail.com",
           "phoneNumber": "1234567890"
         },
         {
-          "courseId": "1",
-          "courseTitle": "javascript",
-          "startDate": "2024-01-29",
-          "daysToComplete": 30,
+          "courseId": "7",
+          "courseTitle": "Java",
+          "coursePrice": "250 kr",
+          "startDate": "2024-02-15",
+          "daysToComplete": "65",
+          "bookingAvailability": "online",
+          "customerName": "Markus",
+          "customerLastName": "Bielaszka",
+          "billingAddress": "Vägen 45",
+          "emailAddress": "markus.bielaszka@gmail.com",
+          "phoneNumber": "1234567890"
+        },
+        {
+          "courseId": "8",
+          "courseTitle": "Java advanced ",
+          "coursePrice": "299 kr",
+          "startDate": "2024-02-29",
+          "daysToComplete": "99",
           "bookingAvailability": "in classroom",
           "customerName": "Markus",
           "customerLastName": "Bielaszka",
-          "billingAddress": "vägen 45",
-          "emailAddress": "markus.bielaszka@gmail.com",
-          "phoneNumber": "1234567890"
-        },
-        {
-          "courseId": "4",
-          "courseTitle": "solidity",
-          "startDate": "2024-02-05",
-          "daysToComplete": 45,
-          "bookingAvailability": "online",
-          "customerName": "Markus",
-          "customerLastName": "Bielaszka",
-          "billingAddress": "vägen 45",
+          "billingAddress": "Vägen 45",
           "emailAddress": "markus.bielaszka@gmail.com",
           "phoneNumber": "1234567890"
         }
-      ],
-      "id": "t_ToAjV"
+      ]
     }
   ]
 }

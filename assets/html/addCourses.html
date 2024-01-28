@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Education</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <main>
+      <div class="navWrapper">
+        <input type="checkbox" name="menu" aria-label="menu checkbox">
+        <header class="navBar">
+          <button aria-label="menu button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <h1 class="logo desktopHidden"><a href="/assets/html/index.html">Blockchain Education</a></h1>
+        </header>
+        <nav>
+          <div class="logo mobileHidden"><a href="/assets/html/index.html">Blockchain Education</a></div>
+          <ul class="navUl">
+            <li><a href="/assets/html/signin.html">sign in</a></li>
+            <li><a href="/assets/html/signup.html">sign up</a></li>
+            <li><a href="/assets/html/courses.html">courses</a></li>
+            <li><a href="#">Administration</a></li>
+            <li><a href="/assets/html/listBookings.html">list bookings</a></li>
+          </ul>
+        </nav>
+      </div>
+    </main><br>
+    <button id="signoutBtn">Sign out</button>
+
+    <form id="addCourseForm"><br>
+      <label for="courseTitle">course title:</label>
+      <input type="text" id="courseTitle" required>
+
+      <label for="coursePrice">course price:</label>
+      <input type="text" id="coursePrice" required>
+    
+      <label for="startDate">start date:</label>
+      <input type="text" id="startDate" required>
+    
+      <label for="daysToComplete">days to complete:</label>
+      <input type="text" id="daysToComplete" required>
+
+      <label for="classroomAvailability">bookable for classroom:</label>
+      <select name="courseLayout" id="classroomAvailability">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select>
+
+      <label for="onlineAvailability">bookable online:</label>
+      <select name="courseLayout" id="onlineAvailability">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select>
+
+      <label for="current">currently available:</label>
+      <select name="current" id="current">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select>
+
+      <label for="popularCourse">popular course:</label>
+      <select name="popularCourse" id="popularCourse">
+        <option value="true">yes</option>
+        <option value="false">no</option>
+      </select>
+
+      <label for="description">description:</label>
+      <input type="text" id="description" required>
+
+      <button id="addNewCourse">Add new course</button>
+    </form>
+    
+    <script type="module" src="/assets/js/addCourses.js"></script>
+  </body>
+</html>

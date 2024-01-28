@@ -7,6 +7,7 @@ export const bookCourse = async (course, bookingAvailability, email) => {
   const bookingInfo = {
     courseId: course.id,
     courseTitle: course.courseTitle,
+    coursePrice: course.coursePrice,
     startDate: course.startDate,
     daysToComplete: course.daysToComplete,
     bookingAvailability: bookingAvailability,
@@ -75,6 +76,7 @@ export const bookCourse = async (course, bookingAvailability, email) => {
           `You have successfully booked the course ${course.courseTitle} ${bookingAvailability}.
           Booking Information:
           Customer name: ${updateResult.booking[0].customerName} ${updateResult.booking[0].customerLastName}
+          Course price: ${updateResult.booking[0].coursePrice}
           Billing Address: ${updateResult.booking[0].billingAddress}
           Email Address: ${updateResult.booking[0].emailAddress}
           Phone Number: ${updateResult.booking[0].phoneNumber}`

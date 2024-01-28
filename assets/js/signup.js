@@ -1,4 +1,5 @@
 import { signoutBtnHandler } from "./utility.js";
+import HttpClient from "./http.js";
 
 const signupForm = document.querySelector('#signupForm');
 
@@ -12,9 +13,13 @@ signupForm.addEventListener('submit', async (event) => {
   
   const userExists = users.some((user) => user.emailAddress === emailAddress);
 
+  const url = 'http://localhost:3000/customers';
+  const http = new HttpClient(url);
+  const usersData = await http.get();
+
   if(!userExists) {
-    // Proceed with sign-up
     const data = {
+      id: `${usersData.length+=1}`,
       customerName: document.querySelector('#customerName').value,
       customerLastName: document.querySelector('#customerLastName').value,
       billingAddress: document.querySelector('#billingAddress').value,

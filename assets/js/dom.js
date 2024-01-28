@@ -17,6 +17,7 @@ const createCard = (course) => {
 
   div.appendChild(createImage(course.imageUrl, course.id));
   div.appendChild(createCourseTitle(course));
+  div.appendChild(getCoursePrice(course));
   div.appendChild(createCourseStartDate(course));
   div.appendChild(daysToCompleteCourse(course));
   div.appendChild(createCourseLayout(course));
@@ -39,6 +40,13 @@ const createImage = (imageUrl, id) => {
 const createCourseTitle = (course) => {
   const paragraph = document.createElement('p');
   paragraph.appendChild(document.createTextNode(`Course: ${course.courseTitle}`));
+
+  return paragraph;
+};
+
+const getCoursePrice = (course) => {
+  const paragraph = document.createElement('p');
+  paragraph.appendChild(document.createTextNode(`Course price: ${course.coursePrice}`));
 
   return paragraph;
 };
