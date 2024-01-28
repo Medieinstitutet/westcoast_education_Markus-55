@@ -29,7 +29,7 @@ usersData.forEach((user) => {
   user.booking.forEach((booking) => {
     const bookingItem = document.createElement('li');
     bookingItem.innerHTML = `
-      <br><li>Course Title: ${booking.courseTitle}</li>
+      <hr><br><li>Course Title: ${booking.courseTitle}</li>
       <li>Course ID: ${booking.courseId}</li>
       <li>Course Price: ${booking.coursePrice}</li>
       <li>Start Date: ${booking.startDate}</li>

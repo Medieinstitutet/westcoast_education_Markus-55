@@ -41,7 +41,7 @@ signupForm.addEventListener('submit', async (event) => {
 
     const result = await signupResponse.json();
     if (result) {
-      alert('logged in with with:', data.emailAddress);
+      alert('Successfully signed up!');
       localStorage.setItem('emailAddress', emailAddress);
       localStorage.setItem('password', password);
     } else {

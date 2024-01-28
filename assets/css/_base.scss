@@ -8,6 +8,39 @@ body {
   overflow-x: hidden;
 }
 
+#signinForm, #signupForm, #addCourseForm {
+  display: grid;
+  justify-content: center;
+  input {
+    min-width: 400px;
+    min-height: 20px;
+  }
+  button {
+    min-height: 25px;
+  }
+}
+
+#courses, #coursesWrapper, #customerBookings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+
+  .course-image, .userBooking {
+    border-style: solid;
+    min-width: 400px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: gray;
+  }
+}
+
+.userBooking {
+  li {
+  list-style: none;
+  }
+}
+
 @function pxToRem($value) {
   @return calc($value / 16px) * 1rem;
 }

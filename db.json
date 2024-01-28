@@ -87,7 +87,7 @@
       "classroomAvailability": false,
       "onlineAvailability": true,
       "current": false,
-      "popularCourse": true,
+      "popular": true,
       "description": "Java for beginners"
     },
     {
@@ -99,8 +99,44 @@
       "classroomAvailability": true,
       "onlineAvailability": false,
       "current": true,
-      "popularCourse": true,
+      "popular": true,
       "description": "Java for experts"
+    },
+    {
+      "id": "9",
+      "courseTitle": "Node.js",
+      "coursePrice": "199 kr",
+      "startDate": "2024-02-02",
+      "daysToComplete": "30",
+      "classroomAvailability": false,
+      "onlineAvailability": true,
+      "current": true,
+      "popular": false,
+      "description": "Node.js for beginners"
+    },
+    {
+      "id": "10",
+      "courseTitle": "Blockchain 101",
+      "coursePrice": "349 kr",
+      "startDate": "2024-02-02",
+      "daysToComplete": "60",
+      "classroomAvailability": false,
+      "onlineAvailability": true,
+      "current": true,
+      "popular": true,
+      "description": "Blockchain basics course"
+    },
+    {
+      "id": "11",
+      "courseTitle": "C++",
+      "coursePrice": "299 kr",
+      "startDate": "2024-02-10",
+      "daysToComplete": "60",
+      "classroomAvailability": true,
+      "onlineAvailability": true,
+      "current": true,
+      "popular": false,
+      "description": "C++ for beginners"
     }
   ],
   "customers": [
@@ -188,6 +224,63 @@
           "billingAddress": "Vägen 45",
           "emailAddress": "markus.bielaszka@gmail.com",
           "phoneNumber": "1234567890"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "customerName": "Björn",
+      "customerLastName": "Olofson",
+      "billingAddress": "Gatan 67",
+      "emailAddress": "bjorn.olofson@email.com",
+      "phoneNumber": "0987654321",
+      "password": "12345",
+      "booking": []
+    },
+    {
+      "id": "4",
+      "customerName": "David",
+      "customerLastName": "Pierre",
+      "billingAddress": "Gatan 34C",
+      "emailAddress": "david.pierre@email.com",
+      "phoneNumber": "1122334455",
+      "password": "12345",
+      "booking": []
+    },
+    {
+      "id": "5",
+      "customerName": "Patrik",
+      "customerLastName": "Carlsson",
+      "billingAddress": "address 87",
+      "emailAddress": "patrik.carlsson@email.com",
+      "phoneNumber": "0794564273",
+      "password": "12345",
+      "booking": [
+        {
+          "courseId": "10",
+          "courseTitle": "Blockchain 101",
+          "coursePrice": "349 kr",
+          "startDate": "2024-02-02",
+          "daysToComplete": "60",
+          "bookingAvailability": "online",
+          "customerName": "Patrik",
+          "customerLastName": "Carlsson",
+          "billingAddress": "address 87",
+          "emailAddress": "patrik.carlsson@email.com",
+          "phoneNumber": "0794564273"
+        },
+        {
+          "courseId": "9",
+          "courseTitle": "Node.js",
+          "coursePrice": "199 kr",
+          "startDate": "2024-02-02",
+          "daysToComplete": "30",
+          "bookingAvailability": "online",
+          "customerName": "Patrik",
+          "customerLastName": "Carlsson",
+          "billingAddress": "address 87",
+          "emailAddress": "patrik.carlsson@email.com",
+          "phoneNumber": "0794564273"
         }
       ]
     }

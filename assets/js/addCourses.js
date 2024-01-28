@@ -16,7 +16,7 @@ const handleAddCourse = () => {
       classroomAvailability: document.querySelector('#classroomAvailability').value === 'true' ? true : false,
       onlineAvailability: document.querySelector('#onlineAvailability').value === 'true' ? true : false,
       current: document.querySelector('#current').value === 'true' ? true : false,
-      popularCourse: document.querySelector('#popularCourse').value === 'true' ? true : false,
+      popular: document.querySelector('#popularCourse').value === 'true' ? true : false,
       description: document.querySelector('#description').value
     }
 

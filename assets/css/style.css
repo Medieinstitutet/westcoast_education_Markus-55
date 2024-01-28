@@ -8,6 +8,36 @@ body {
   overflow-x: hidden;
 }
 
+#signinForm, #signupForm, #addCourseForm {
+  display: grid;
+  justify-content: center;
+}
+#signinForm input, #signupForm input, #addCourseForm input {
+  min-width: 400px;
+  min-height: 20px;
+}
+#signinForm button, #signupForm button, #addCourseForm button {
+  min-height: 25px;
+}
+
+#courses, #coursesWrapper, #customerBookings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+#courses .course-image, #courses .userBooking, #coursesWrapper .course-image, #coursesWrapper .userBooking, #customerBookings .course-image, #customerBookings .userBooking {
+  border-style: solid;
+  min-width: 400px;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: gray;
+}
+
+.userBooking li {
+  list-style: none;
+}
+
 @media screen and (min-width: 642px), (max-width: 1023px) {
   /* Style for hiding and showing css,
   when switching from tablet to desktop screen */
