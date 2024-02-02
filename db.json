@@ -51,92 +51,6 @@
       "popular": true,
       "imageUrl": "solidity.jpg",
       "description": "Beginners course for solidity"
-    },
-    {
-      "id": "5",
-      "courseTitle": "react",
-      "coursePrice": "225 kr",
-      "startDate": "2024-02-19",
-      "daysToComplete": 28,
-      "classroomAvailability": true,
-      "onlineAvailability": true,
-      "current": false,
-      "popular": true,
-      "imageUrl": "react.jpg",
-      "description": "Beginners course for react"
-    },
-    {
-      "id": "6",
-      "courseTitle": "python",
-      "coursePrice": "200 kr",
-      "startDate": "2024-02-15",
-      "daysToComplete": 45,
-      "classroomAvailability": true,
-      "onlineAvailability": false,
-      "current": false,
-      "popular": false,
-      "imageUrl": "python.jpg",
-      "description": "Beginners course for python"
-    },
-    {
-      "id": "7",
-      "courseTitle": "Java",
-      "coursePrice": "250 kr",
-      "startDate": "2024-02-15",
-      "daysToComplete": "65",
-      "classroomAvailability": false,
-      "onlineAvailability": true,
-      "current": false,
-      "popular": true,
-      "description": "Java for beginners"
-    },
-    {
-      "id": "8",
-      "courseTitle": "Java advanced ",
-      "coursePrice": "299 kr",
-      "startDate": "2024-02-29",
-      "daysToComplete": "99",
-      "classroomAvailability": true,
-      "onlineAvailability": false,
-      "current": true,
-      "popular": true,
-      "description": "Java for experts"
-    },
-    {
-      "id": "9",
-      "courseTitle": "Node.js",
-      "coursePrice": "199 kr",
-      "startDate": "2024-02-02",
-      "daysToComplete": "30",
-      "classroomAvailability": false,
-      "onlineAvailability": true,
-      "current": true,
-      "popular": false,
-      "description": "Node.js for beginners"
-    },
-    {
-      "id": "10",
-      "courseTitle": "Blockchain 101",
-      "coursePrice": "349 kr",
-      "startDate": "2024-02-02",
-      "daysToComplete": "60",
-      "classroomAvailability": false,
-      "onlineAvailability": true,
-      "current": true,
-      "popular": true,
-      "description": "Blockchain basics course"
-    },
-    {
-      "id": "11",
-      "courseTitle": "C++",
-      "coursePrice": "299 kr",
-      "startDate": "2024-02-10",
-      "daysToComplete": "60",
-      "classroomAvailability": true,
-      "onlineAvailability": true,
-      "current": true,
-      "popular": false,
-      "description": "C++ for beginners"
     }
   ],
   "customers": [
@@ -150,25 +64,12 @@
       "password": "password",
       "booking": [
         {
-          "courseId": "1",
+          "courseId": 1,
           "courseTitle": "javascript",
           "coursePrice": "225 kr",
           "startDate": "2024-01-29",
           "daysToComplete": 30,
           "bookingAvailability": "online and in classroom",
-          "customerName": "Berndt",
-          "customerLastName": "Jansson",
-          "billingAddress": "Hogbergsgatan 12",
-          "emailAddress": "berndt.jansson@email.com",
-          "phoneNumber": "+1234567890"
-        },
-        {
-          "courseId": "6",
-          "courseTitle": "python",
-          "coursePrice": "200 kr",
-          "startDate": "2024-02-15",
-          "daysToComplete": 45,
-          "bookingAvailability": "in classroom",
           "customerName": "Berndt",
           "customerLastName": "Jansson",
           "billingAddress": "Hogbergsgatan 12",
@@ -200,25 +101,12 @@
           "phoneNumber": "1234567890"
         },
         {
-          "courseId": "7",
-          "courseTitle": "Java",
-          "coursePrice": "250 kr",
-          "startDate": "2024-02-15",
-          "daysToComplete": "65",
+          "courseId": "2",
+          "courseTitle": "html",
+          "coursePrice": "125 kr",
+          "startDate": "2024-01-23",
+          "daysToComplete": 14,
           "bookingAvailability": "online",
-          "customerName": "Markus",
-          "customerLastName": "Bielaszka",
-          "billingAddress": "Vägen 45",
-          "emailAddress": "markus.bielaszka@gmail.com",
-          "phoneNumber": "1234567890"
-        },
-        {
-          "courseId": "8",
-          "courseTitle": "Java advanced ",
-          "coursePrice": "299 kr",
-          "startDate": "2024-02-29",
-          "daysToComplete": "99",
-          "bookingAvailability": "in classroom",
           "customerName": "Markus",
           "customerLastName": "Bielaszka",
           "billingAddress": "Vägen 45",
@@ -255,34 +143,7 @@
       "emailAddress": "patrik.carlsson@email.com",
       "phoneNumber": "0794564273",
       "password": "12345",
-      "booking": [
-        {
-          "courseId": "10",
-          "courseTitle": "Blockchain 101",
-          "coursePrice": "349 kr",
-          "startDate": "2024-02-02",
-          "daysToComplete": "60",
-          "bookingAvailability": "online",
-          "customerName": "Patrik",
-          "customerLastName": "Carlsson",
-          "billingAddress": "address 87",
-          "emailAddress": "patrik.carlsson@email.com",
-          "phoneNumber": "0794564273"
-        },
-        {
-          "courseId": "9",
-          "courseTitle": "Node.js",
-          "coursePrice": "199 kr",
-          "startDate": "2024-02-02",
-          "daysToComplete": "30",
-          "bookingAvailability": "online",
-          "customerName": "Patrik",
-          "customerLastName": "Carlsson",
-          "billingAddress": "address 87",
-          "emailAddress": "patrik.carlsson@email.com",
-          "phoneNumber": "0794564273"
-        }
-      ]
+      "booking": []
     }
   ]
 }

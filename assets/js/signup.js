@@ -19,7 +19,7 @@ signupForm.addEventListener('submit', async (event) => {
 
   if(!userExists) {
     const data = {
-      id: `${usersData.length+=1}`,
+      id: usersData.length+=1,
       customerName: document.querySelector('#customerName').value,
       customerLastName: document.querySelector('#customerLastName').value,
       billingAddress: document.querySelector('#billingAddress').value,

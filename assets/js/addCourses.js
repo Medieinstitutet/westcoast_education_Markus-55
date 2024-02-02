@@ -8,7 +8,7 @@ const handleAddCourse = () => {
     const courses = await loadCourses();
 
     const newCourse = {
-      id: `${courses.length+=1}`,
+      id: courses.length+=1,
       courseTitle: document.querySelector('#courseTitle').value,
       coursePrice: document.querySelector('#coursePrice').value,
       startDate: document.querySelector('#startDate').value,
@@ -17,6 +17,7 @@ const handleAddCourse = () => {
       onlineAvailability: document.querySelector('#onlineAvailability').value === 'true' ? true : false,
       current: document.querySelector('#current').value === 'true' ? true : false,
       popular: document.querySelector('#popularCourse').value === 'true' ? true : false,
+      imageUrl: document.querySelector('#imageUrl').value,
       description: document.querySelector('#description').value
     }
 
@@ -38,15 +39,8 @@ const handleAddCourse = () => {
     } catch (error) {
       console.error('Error:', error);
     }
-
   });
 
-  // Call a function to send the new course data to the server
-  // saveNewCourse(newCourse);
 }
-
-// const saveNewCourse = (newCourse) => {
-
-// }
 
 document.addEventListener('DOMContentLoaded', handleAddCourse);

@@ -1,6 +1,6 @@
 import { signoutBtnHandler } from "./utility.js";
 
-document.querySelector('#signinForm').addEventListener('submit', async event => {
+document.querySelector('#signinForm #signinBtn').addEventListener('click', async event => {
     event.preventDefault();
 
     const emailAddress = document.querySelector('#emailAddress').value;
@@ -31,6 +31,8 @@ document.querySelector('#signinForm').addEventListener('submit', async event => 
     } else {
       alert('User does not exist');
     }
+
+    document.querySelector('#signinForm').reset();
   });
 
   signoutBtnHandler();

@@ -1,3 +1,4 @@
+import { signoutBtnHandler } from "./utility.js";
 import HttpClient from "./http.js";
 
 const url = 'http://localhost:3000/customers';
@@ -43,6 +44,4 @@ usersData.forEach((user) => {
   userBookingsDiv.appendChild(userDiv);
 });
 
-const allBookings = usersData.map((user) => user.booking);
-
-console.log(allBookings);
+signoutBtnHandler();
