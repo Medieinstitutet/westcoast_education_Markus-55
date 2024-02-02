@@ -15,7 +15,7 @@ interface Course {
 }
 
 const createCard = (course: Course) => {
-  const div = document.createElement('div');
+  const div: HTMLDivElement = document.createElement('div');
   div.classList.add('course-image');
 
   bookOnline = document.createElement('button');

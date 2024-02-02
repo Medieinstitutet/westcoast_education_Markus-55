@@ -1,5 +1,5 @@
-import { signoutBtnHandler } from "./utility.js";
-import HttpClient from "./http.js";
+import { signoutBtnHandler } from "/assets/dist/utility.js";
+import HttpClient from "/assets/dist/http.js";
 
 const signupForm = document.querySelector('#signupForm');
 

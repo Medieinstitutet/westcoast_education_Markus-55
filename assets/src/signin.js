@@ -1,4 +1,4 @@
-import { signoutBtnHandler } from "./utility.js";
+import { signoutBtnHandler } from "/assets/dist/utility.js";
 
 document.querySelector('#signinForm #signinBtn').addEventListener('click', async event => {
     event.preventDefault();
