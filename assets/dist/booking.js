@@ -1,15 +1,6 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { getUser } from './utility.js';
-const bookCourse = (course, bookingAvailability, email) => __awaiter(void 0, void 0, void 0, function* () {
-    const users = yield getUser(email);
+const bookCourse = async (course, bookingAvailability, email) => {
+    const users = await getUser(email);
     const user = users.find((user) => user);
     const bookingInfo = {
         courseId: course.id,
@@ -24,8 +15,8 @@ const bookCourse = (course, bookingAvailability, email) => __awaiter(void 0, voi
         emailAddress: user.emailAddress,
         phoneNumber: user.phoneNumber,
     };
-    const userEmailResponse = yield fetch(`http://localhost:3000/customers?emailAddress=${email}`);
-    const userEmailData = yield userEmailResponse.json();
+    const userEmailResponse = await fetch(`http://localhost:3000/customers?emailAddress=${email}`);
+    const userEmailData = await userEmailResponse.json();
     // Check if the user data is found
     if (userEmailData.length > 0) {
         const user = userEmailData[0];
@@ -67,14 +58,14 @@ const bookCourse = (course, bookingAvailability, email) => __awaiter(void 0, voi
                 }
                 user.booking.push(bookingInfo);
                 // Update the user's data on the server
-                const updateResponse = yield fetch(`http://localhost:3000/customers/${user.id}`, {
+                const updateResponse = await fetch(`http://localhost:3000/customers/${user.id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(user),
                 });
-                const updateResult = yield updateResponse.json();
+                const updateResult = await updateResponse.json();
                 alert(`You have successfully booked the course ${course.courseTitle} ${bookingAvailability}.
           Booking Information:
           Customer name: ${updateResult.booking[0].customerName} ${updateResult.booking[0].customerLastName}
@@ -91,5 +82,5 @@ const bookCourse = (course, bookingAvailability, email) => __awaiter(void 0, voi
             alert('You have already booked for this course layout');
         }
     }
-});
+};
 export { bookCourse };

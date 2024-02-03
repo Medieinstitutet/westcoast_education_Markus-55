@@ -1,12 +1,3 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { loadCourses } from "./utility.js";
 const handleAddCourse = () => {
     const addCourseForm = document.querySelector('#addCourseForm');
@@ -21,9 +12,9 @@ const handleAddCourse = () => {
     const imageUrl = document.querySelector('#imageUrl');
     const description = document.querySelector('#description');
     if (addCourseForm) {
-        addCourseForm.addEventListener('submit', (event) => __awaiter(void 0, void 0, void 0, function* () {
+        addCourseForm.addEventListener('submit', async (event) => {
             event.preventDefault();
-            const courses = yield loadCourses();
+            const courses = await loadCourses();
             const newCourse = {
                 id: courses.length += 1,
                 courseTitle: courseTitle ? courseTitle.value : '',
@@ -38,7 +29,7 @@ const handleAddCourse = () => {
                 description: description ? description.value : ''
             };
             try {
-                const response = yield fetch('http://localhost:3000/courses', {
+                const response = await fetch('http://localhost:3000/courses', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -55,7 +46,7 @@ const handleAddCourse = () => {
             catch (error) {
                 console.error('Error:', error);
             }
-        }));
+        });
     }
 };
 document.addEventListener('DOMContentLoaded', handleAddCourse);

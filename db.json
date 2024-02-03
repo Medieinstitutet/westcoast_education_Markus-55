@@ -144,6 +144,16 @@
       "phoneNumber": "0794564273",
       "password": "12345",
       "booking": []
+    },
+    {
+      "id": 6,
+      "customerName": "test",
+      "customerLastName": "test",
+      "billingAddress": "test 1",
+      "emailAddress": "test.test@email.com",
+      "phoneNumber": "1234567890",
+      "password": "12345",
+      "booking": []
     }
   ]
 }
